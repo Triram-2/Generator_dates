@@ -1,26 +1,27 @@
+"""
 # Generator Dates
 
-Generator Dates — это Python-библиотека для генерации случайных дат в различных форматах и языках.  
-Поддерживает английский (`en`) и русский (`ru`) языки.
+Generator Dates is a Python library for generating random dates in various formats and languages.  
+Supports English (`en`) and Russian (`ru`) languages.
 
-## Возможности
+## Features
 
-- Генерация случайных дат с настраиваемым форматом
-- Поддержка полного и сокращенного названий месяцев
-- Выбор диапазона дней, месяцев и годов
-- Сохранение истории сгенерированных дат
-- Поддержка вывода в виде объектов `datetime` и `date`
-- Обработка некорректных диапазонов
+- Random date generation with a customizable format
+- Support for full and abbreviated month names
+- Selection of day, month, and year ranges
+- Saving history of generated dates
+- Output support as `datetime` and `date` objects
+- Handling of invalid ranges
 
-## Установка
+## Installation
 
-Установить можно через `pip` (после публикации на PyPI):
+Install via `pip`:
 
 ```sh
 pip install generator_dates
 ```
 
-Или вручную:
+Or manually:
 
 ```sh
 git clone https://github.com/yourusername/generator_dates.git
@@ -28,38 +29,38 @@ cd generator_dates
 pip install .
 ```
 
-## Использование
+## Usage
 
 ```python
 from generator_dates import GeneratorDates
 
 generator = GeneratorDates(format="{d} {month} {y}", lang="ru", save_history=True)
 random_date = generator.generate_date(range_day=(1, 30), range_month=(1, 12), range_year=(1900, 2023))
-print(random_date)  # Например: 12 марта 1987
+print(random_date)  # Example: 12 марта 1987
 
-# Просмотр истории сгенерированных дат
+# View history of generated dates
 print(generator.history)
 ```
 
-## Настройки
+## Settings
 
-- **`format`** – строка формата даты:
-  - `{d}` – день месяца
-  - `{m}` – число месяца
-  - `{y}` – год
-  - `{mon}` – сокращенное название месяца
-  - `{month}` – полное название месяца
-  - `'datetime'` – возвращает объект `datetime`
-  - `'date'` – возвращает объект `date`
-- **`lang`** – язык (`en` или `ru`)
-- **`save_history`** – сохранять ли историю сгенерированных дат (по умолчанию `True`)
+- **`format`** – date format string:
+  - `{d}` – day of the month
+  - `{m}` – month number
+  - `{y}` – year
+  - `{mon}` – abbreviated month name
+  - `{month}` – full month name
+  - `'datetime'` – returns a `datetime` object
+  - `'date'` – returns a `date` object
+- **`lang`** – language (`en` or `ru`)
+- **`save_history`** – whether to save the history of generated dates (default is `True`)
 
-## Исключения
+## Exceptions
 
-- `LanguageError` — если передан неподдерживаемый язык.
-- `ValueError` — если заданы некорректные диапазоны для дня, месяца или года.
+- `LanguageError` – if an unsupported language is provided.
+- `ValueError` – if invalid ranges for day, month, or year are given.
 
-## Лицензия
+## License
 
-Проект распространяется под лицензией MIT.
-
+This project is licensed under the MIT License.
+"""

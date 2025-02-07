@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="generator_dates",
-    version="0.2.4",
+    version="0.2.5",
     description="A Python package to generate random dates in different formats and languages.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
