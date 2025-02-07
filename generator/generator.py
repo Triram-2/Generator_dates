@@ -163,6 +163,8 @@ class GeneratorDates:
         month = random.randint(*range_month)
 
         max_day = calendar.monthrange(year, month)[1]
+        if month == 2 and year % 4 != 0:
+            max_day = 28
         if range_day[0] > max_day:
             range_day = (max_day, range_day[-1])
         if range_day[0] <= 0:
@@ -203,7 +205,7 @@ def check_class():
 
     generator = GeneratorDates()
     for i in range(1, 4):
-        random_date = generator.generate_date(range_day=(-33, 33))
+        random_date = generator.generate_date()
         print(f'{i} random date: {random_date}')
     print(generator.history, end='\n\n')
     
