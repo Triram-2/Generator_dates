@@ -1,3 +1,25 @@
+Metadata-Version: 2.2
+Name: generator_dates
+Version: 0.2.0
+Summary: A Python package to generate random dates in different formats and languages.
+Home-page: https://github.com/Triram-2/generator_dates
+Author: Misha
+Author-email: bobyyy239@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
 # Generator Dates
 
 Generator Dates — это Python-библиотека для генерации случайных дат в различных форматах и языках.  
