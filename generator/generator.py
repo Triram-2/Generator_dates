@@ -122,6 +122,9 @@ class GeneratorDates:
         self.history = []
         self.save_history = save_history
     
+    def __repr__(self):
+        return f'GeneratorDates: {self.format}; lang={self.lang}'
+
     def generate_date(self, range_day=(1, 28), range_month=(1, 12), range_year=(1950, 2000)):
         """
         Generates a random date within the given ranges.
@@ -214,6 +217,7 @@ def check_class():
         random_date = generator.generate_date()
         print(f'{i} random date datetime: {random_date}')
     print(generator.history)
+    print(generator)
 
 
 if __name__ == '__main__':
