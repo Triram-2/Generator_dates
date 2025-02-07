@@ -123,7 +123,12 @@ class GeneratorDates:
         self.save_history = save_history
     
     def __repr__(self):
-        return f'GeneratorDates: {self.format}; lang={self.lang}'
+        """
+        Returns a string representation of the GeneratorNames instance.
+
+        :return: A string containing save_history status and history size.
+        """
+        return f"GeneratorDates: save_history={self.save_history}, history_size={len(self.history)}"
 
     def generate_date(self, range_day=(1, 28), range_month=(1, 12), range_year=(1950, 2000)):
         """
